@@ -1,0 +1,40 @@
+# Source files (we ship the built dist)
+*.ts
+!*.d.ts
+!*.d.cts
+
+# Config files
+tsconfig.json
+tsup.config.ts
+.eslintrc*
+.prettierrc*
+
+# Tests
+tests/
+*.test.*
+*.spec.*
+coverage/
+
+# Development files
+.vscode/
+.idea/
+.editorconfig
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation (keep README)
+docs/
+
+# Other
+.DS_Store
+*.log
+node_modules/
+.env*

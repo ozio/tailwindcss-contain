@@ -1,0 +1,63 @@
+{
+	"name": "@ozio/tailwindcss-contain",
+	"version": "1.0.0",
+	"description": "A Tailwind CSS plugin that provides utilities for the CSS contain property with all valid values and combinations",
+	"keywords": [
+		"tailwindcss",
+		"tailwind",
+		"plugin",
+		"contain",
+		"css-contain",
+		"containment",
+		"performance"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ozio/tailwindcss-contain.git"
+	},
+	"license": "MIT",
+	"author": "Nikolay Solovyov <i@mr-ozio.ru>",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"import": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"require": {
+			"types": "./dist/index.d.cts",
+			"require": "./dist/index.cjs",
+			"default": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"src",
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsup",
+		"check-types": "tsc --noEmit",
+		"test": "npm run check-types && vitest run",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@microsoft/api-extractor": "^7.52.3",
+		"@types/node": "^22.14.0",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^3.4.17",
+		"tsup": "^8.4.0",
+		"typescript": "^5.7.2",
+		"vitest": "^3.1.1"
+	},
+	"peerDependencies": {
+		"tailwindcss": "^3.0.0 || ^4.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
